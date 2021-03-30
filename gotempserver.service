@@ -1,0 +1,14 @@
+[Unit]
+Description=GO Temp Server
+After=network.target
+
+[Service]
+WorkingDirectory=/home/pi/src
+ExecStart=/home/pi/src/pi-dash/go_temp_server
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
